@@ -1,0 +1,13 @@
+<div class="tw-py-4">
+    <div class="tw-text-center" mat-dialog-content>
+        <p>{{data.description}}</p>
+    </div>
+    <div mat-dialog-actions class="d-flex align-item-center justify-items-center">
+        <button mat-flat-button class="btn btn-success py-1 px-5 mx-2" [mat-dialog-close]="true" cdkFocusInitial>
+            <span>{{data.confirmBtn}}</span></button>
+
+        <button mat-flat-button mat-flat-button class="btn btn-danger py-1 px-5 mx-2"  
+            (click)="onNoClick()">{{data.cancelBtn}}</button>
+
+    </div>
+</div>
