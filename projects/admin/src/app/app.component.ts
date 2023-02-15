@@ -17,8 +17,4 @@ export class AppComponent {
     this.translate.use(this.lang);
   }
   title = 'angulartasks';
-
-  a(){
-    this.toastr.success("Hello")
-  }
 }

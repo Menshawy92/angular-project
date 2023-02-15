@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 export interface PeriodicElement {
   title: string;
   description: string;
@@ -40,7 +41,7 @@ export class ListTasksComponent implements OnInit {
     {name:"Complete" , id:1},
     {name:"In-Prossing" , id:2},
   ]
-  constructor(public dialog: MatDialog ,private fb:FormBuilder) { }
+  constructor(public dialog: MatDialog ,private fb:FormBuilder,private router: Router ) { }
 
   ngOnInit(): void {
     this.createform()
@@ -54,7 +55,9 @@ export class ListTasksComponent implements OnInit {
       toDate:['']
     })
   }
-
+  x(slug:any){
+    this.router.navigate(['tasks', slug])
+  }
   getAllTasks() {
 
   }

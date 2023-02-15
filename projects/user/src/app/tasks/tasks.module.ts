@@ -6,10 +6,12 @@ import { ListTasksComponent } from './components/list-tasks/list-tasks.component
 import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LayoutComponent } from './layout/layout.component';
 
 
 @NgModule({
   declarations: [
+    LayoutComponent,
     ListTasksComponent
   ],
   imports: [

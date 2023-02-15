@@ -8,7 +8,7 @@
           <h2 class="card-title">{{item.title}}</h2>
           <p class="card-subtitle mb-2 text-muted">Dead-Line Date : {{item.deadLineDate}}</p>
           <p class="card-text">{{item.description }}</p>
-          <a  class="card-link"  mat-raised-button color="basic">Details</a>
+          <a  class="card-link"  mat-raised-button color="basic" (click)="x(item.title)">Details</a>
           <button  mat-raised-button color="warn">Complete</button>
         </div>
       </div>
