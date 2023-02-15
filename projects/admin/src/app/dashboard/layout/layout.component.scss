@@ -1,9 +1,9 @@
 nav {
-    background-color: #ca085a;
+    background-color: #08ca8a;
     .navbar-brand {
         font-size: 27px;
         font-weight: bold;
-        color: #e3d510!important;
+        color: #fff!important;
 
     }
     a {
@@ -11,7 +11,7 @@ nav {
         color: #FFF!important;
         //padding: 7px 20px;  
         &.active  {
-            background-color: #910340;
+            background-color: #107956;
             color: #FFF;
         }
     }
