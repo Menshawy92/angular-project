@@ -7,6 +7,7 @@ import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutComponent } from './layout/layout.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { LayoutComponent } from './layout/layout.component';
     ReactiveFormsModule,
     HttpClientModule,
     CommonModule,
-    TasksRoutingModule
+    TasksRoutingModule,
+    NgxPaginationModule
   ]
 })
 export class TasksModule { }

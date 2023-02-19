@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -29,7 +29,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class ListTasksComponent implements OnInit {
   displayedColumns: string[] = ['position', 'title', 'user' ,'deadLineDate','status', 'actions'];
   dataSource = ELEMENT_DATA;
-  tasksFilter!:FormGroup
+  tasksFilter!:FormGroup;
+  @Input() page: number = 1;
   users:any = [
     {name:"Moahmed" , id:1},
     {name:"Ali" , id:2},
@@ -55,10 +56,12 @@ export class ListTasksComponent implements OnInit {
       toDate:['']
     })
   }
-  x(slug:any){
-    this.router.navigate(['tasks', slug])
-  }
   getAllTasks() {
 
   }
+  changePage(event:any){
+    this.page = event;
+    // this.filtration['_page'] = event
+  }
+
 }
