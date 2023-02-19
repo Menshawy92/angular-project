@@ -19,12 +19,12 @@ export class AppComponent {
     this.lang = localStorage.getItem("lang")
     this.translate.use(this.lang);
     document.dir = this.lang == "ar" ? 'rtl' : 'ltr';
-    // this.router.navigate(['', this.lang ])
+    this.router.navigate([''],{queryParams: {lang: this.lang}})
   }
   title = 'angulartasks';
 
   changeLang() {
-   
+    
     this.translate.use(this.lang);
     if (this.lang == "en") {
       localStorage.setItem("lang", "ar")

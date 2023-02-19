@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppModule } from 'projects/admin/src/app/app.module';
 
 const routes: Routes = [
-  // {path:'', redirectTo:'/en', pathMatch:'full'},
   {
     path: 'tasks',
     loadChildren: () => import(`./tasks/tasks.module`).then(m => m.TasksModule)
