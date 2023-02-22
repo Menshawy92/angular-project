@@ -46,6 +46,7 @@ export class ListTasksComponent implements OnInit {
 
   ngOnInit(): void {
     this.createform()
+    this.getAllTasks()
   }
 
   createform() {
@@ -57,7 +58,9 @@ export class ListTasksComponent implements OnInit {
     })
   }
   getAllTasks() {
-
+    let token = JSON.stringify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGVsQGdtYWlsLmNvbSIsIm5hbWUiOiJtZW5zaGF3eSIsInBhc3MiOjE1MTYyMzkwMjJ9.Ha3E1ZkS5YvqFtrtvnZqJFscxqn1f_ax1eEZY5X2Gvo");
+    let divideToken = JSON.parse(window.atob(token.split('.')[1]))
+    console.log("divideToken",divideToken)
   }
   changePage(event:any){
     this.page = event;
